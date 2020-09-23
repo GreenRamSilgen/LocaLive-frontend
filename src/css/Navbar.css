@@ -1,0 +1,54 @@
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: var(--nav-size);
+    box-shadow: 0px 0px 5px grey;
+}
+.navBar__right{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: blue;
+
+    width: 20%;
+    margin-right: 1em;
+}
+.dropdown {
+    position: absolute;
+    top: 58px;
+    width: fit-content;
+    transform: translateX(-43%);
+    background-color: var(--bg);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    /* padding: 1rem; */
+    overflow: hidden;
+    transition: height var(--speed) ease;
+}
+
+.dropDownItem{
+    padding: 0.5em 1em;
+}
+
+
+/*!CSS ANIMATION*/
+.drop-primary-enter {
+    position: absolute;
+    opacity: 0;
+    /* transform: translateY(-110%); */
+  }
+  .drop-primary-enter-active {
+      opacity: 1;
+    /* transform: translateY(0%); */
+    transition: all var(--speed) ease;
+  }
+  .drop-primary-exit {
+    position: absolute;
+    opacity: 1;
+  }
+  .drop-primary-exit-active {
+      opacity: 0;
+    /* transform: translateY(-110%); */
+    transition: all var(--speed) ease;
+  }
