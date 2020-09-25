@@ -7,10 +7,15 @@ export const userSlice = createSlice({
         id:'',
         loggedIn: false,
         userToken:'',
+        cart:[],
+        cartTotal:0,
     },
     reducers:{
         setLoginTrue: state =>{
             state.loggedIn = true;
+        },
+        setLoginFalse: state =>{
+            state.loggedIn = false;
         }
     }
 });

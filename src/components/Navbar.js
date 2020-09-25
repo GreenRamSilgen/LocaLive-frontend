@@ -5,16 +5,11 @@ import "../css/Navbar.css";
 function Navbar() {
   return (
     <nav className="navBar">
-      <div className="navBar__left">STUFF HERE</div>
+      <div className="navBar__left">LocaLive</div>
       <div className="navBar__middle">STUFF HERE</div>
       <div className="navBar__right">
-        <NavItem icon="ICO">
-          <Dropdown>
-            <DropdownItem>Upload</DropdownItem>
-            <DropdownItem>Download</DropdownItem>
-            <DropdownItem>Run</DropdownItem>
-          </Dropdown>
-        </NavItem>
+        <a href="#">Upload</a>
+        <a href="#">Cart</a>
         <NavItem icon="lel">
           <Dropdown>
             <DropdownItem>My Profile</DropdownItem>

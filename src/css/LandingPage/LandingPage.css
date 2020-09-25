@@ -1,0 +1,16 @@
+.landingPageBody{
+    display: flex;
+    height: inherit;
+}
+
+.landingPageLeft{
+    height: calc(100% - var(--nav-size));
+    width: fit-content;
+    padding: 1em;
+    border-right: 1px black solid;
+}
+.landingPageRight{
+    width: 100%;
+    padding: 1em;
+    background-color: tan;
+}
