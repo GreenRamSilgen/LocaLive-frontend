@@ -3,14 +3,45 @@
     height: inherit;
 }
 
+/*! LANDING PAGE LEFT*/
 .landingPageLeft{
-    height: calc(100% - var(--nav-size));
+    height: auto;
     width: fit-content;
     padding: 1em;
     border-right: 1px black solid;
 }
+
+/*Price Range*/
+.landingPageLeft__filterOptions--priceRangeInputs{
+    display: flex;
+}
+.gap{
+    padding: 0em 1em;
+}
+.landingPageLeft__filterOptions--priceRangeInputs input{
+    width: 4em;
+    text-align: center;
+}
+
+/*Quality Filter*/
+.landingPageLeft__filterOptions--quality{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.landingPageLeft__filterOptions--qualityOptions{
+    display: flex;
+}
+.landingPageLeft__filterOptions--qualityOption{
+    display: flex;
+    align-items: center;
+}
+
+
+/*! LANDING PAGE RIGHT*/
 .landingPageRight{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
     width: 100%;
-    padding: 1em;
     background-color: tan;
 }

@@ -1,5 +1,16 @@
-.card{
-    height: 100px;
-    width: 100px;
+.productCard{
+    height: 200px;
+    width: 200px;
     background-color: grey;
+}
+.productCard__image{
+    height: 60%;
+
+    padding: 1em;
+    background-color: lightcoral;
+}
+.productCard__info{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
 }
