@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { makeStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
-import Slider from '@material-ui/core/Slider'
+import { makeStyles } from "@material-ui/core/styles";
+import Typography from "@material-ui/core/Typography";
+import Slider from "@material-ui/core/Slider";
 
 import ProductCard from "./ProductCard";
 
@@ -15,12 +15,12 @@ const useStyles = makeStyles({
 function valuetext(value) {
   return `${value}°C`;
 }
-export default class LandingPage extends React.Component{
+export default class LandingPage extends React.Component {
   constructor() {
     super();
 
     this.state = {
-      filterPriceRange: [0,1000],
+      filterPriceRange: [0, 1000],
       filterQuality: "New" /*New, Used, Scrap*/,
 
       skip: 0,
@@ -29,34 +29,40 @@ export default class LandingPage extends React.Component{
 
     this.handleChange = this.handleChange.bind(this);
     this.princeRangeLowInputChange = this.princeRangeLowInputChange.bind(this);
-    this.princeRangeHighInputChange = this.princeRangeHighInputChange.bind(this);
+    this.princeRangeHighInputChange = this.princeRangeHighInputChange.bind(
+      this
+    );
   }
 
-  handleChange(event, newValue){
+  handleChange(event, newValue) {
     this.setState({
       filterPriceRange: newValue,
     });
-    console.log(this.state.filterPriceRange)
+    console.log(this.state.filterPriceRange);
   }
 
-  princeRangeLowInputChange(event){
-    if(event.target.value === ''){
+  princeRangeLowInputChange(event) {
+    let re = new RegExp(/\D+/);
+    if(re.test(event.target.value)) return;
+    if (event.target.value === "") {
       this.setState({
-        filterPriceRange: [0,this.state.filterPriceRange[1]]
+        filterPriceRange: [0, this.state.filterPriceRange[1]],
       });
       return;
-    };
+    }
     this.setState({
       filterPriceRange: [event.target.value, this.state.filterPriceRange[1]],
     });
   }
-  princeRangeHighInputChange(event){
-    if(event.target.value === ''){
+  princeRangeHighInputChange(event) {
+    let re = new RegExp(/\D+/);
+    if(re.test(event.target.value)) return;
+    if (event.target.value === "") {
       this.setState({
-        filterPriceRange: [this.state.filterPriceRange[0],1]
+        filterPriceRange: [this.state.filterPriceRange[0], 1],
       });
       return;
-    };
+    }
     this.setState({
       filterPriceRange: [this.state.filterPriceRange[0], event.target.value],
     });
@@ -76,9 +82,19 @@ export default class LandingPage extends React.Component{
                 Price Range:
               </Typography>
               <div className="landingPageLeft__filterOptions--priceRangeInputs">
-              <input type="text" onChange={this.princeRangeLowInputChange} placeholder={this.state.filterPriceRange[0]} value={this.state.filterPriceRange[0]}/>
-    <div className="gap">{`-`}</div>
-              <input type="text" onChange={this.princeRangeHighInputChange} placeholder={this.state.filterPriceRange[1]} value={this.state.filterPriceRange[1]}/>
+                <input
+                  type="text"
+                  onChange={this.princeRangeLowInputChange}
+                  placeholder={this.state.filterPriceRange[0]}
+                  value={this.state.filterPriceRange[0]}
+                />
+                <div className="gap">{`-`}</div>
+                <input
+                  type="text"
+                  onChange={this.princeRangeHighInputChange}
+                  placeholder={this.state.filterPriceRange[1]}
+                  value={this.state.filterPriceRange[1]}
+                />
               </div>
               {/* <div>{`$${this.state.filterPriceRange[0]} -- $${this.state.filterPriceRange[1]}`} </div> */}
               <Slider
@@ -91,7 +107,6 @@ export default class LandingPage extends React.Component{
                 aria-labelledby="range-slider"
                 getAriaValueText={valuetext}
               />
-              
             </div>
 
             {/* QUALITY FILTER*/}
