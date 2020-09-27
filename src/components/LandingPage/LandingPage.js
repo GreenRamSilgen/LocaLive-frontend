@@ -139,9 +139,17 @@ export default class LandingPage extends React.Component {
             </div>
           </div>
         </div>
+
+
         <div className="landingPageRight">
           <div className="landingPageRight__searchBar">Search Bar HERE</div>
           <div className="landingPageRight__products">
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
             <ProductCard />
           </div>
           <div className="landingPageRight__loadmore">LOAD MORE</div>

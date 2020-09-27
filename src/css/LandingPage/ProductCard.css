@@ -1,16 +1,27 @@
 .productCard{
-    height: 200px;
-    width: 200px;
+    height: 250px;
     background-color: grey;
+    width: calc(100%/5);
+    flex-grow:0;
+    margin: 0.5em;
 }
 .productCard__image{
-    height: 60%;
 
-    padding: 1em;
     background-color: lightcoral;
 }
 .productCard__info{
     display: flex;
     justify-content: space-between;
-    padding: 5px;
+    padding: 0px 5px;
+}
+
+/**Media Queries*/
+@media only screen and (max-width: 600px) {
+    .productCard{
+        height: auto;
+        background-color: grey;
+        width:100%;
+        flex-grow:0;
+        margin: 0.5em;
+    }
 }

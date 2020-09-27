@@ -45,3 +45,23 @@
     width: 100%;
     background-color: tan;
 }
+.landingPageRight__products{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    overflow-y: scroll;
+
+    padding: 1em;
+}
+/**Media Queries*/
+@media only screen and (max-width: 600px) {
+    .landingPageRight__products{    
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: unset;
+        align-items: unset;
+        overflow-y: scroll;
+        padding: 1em;
+    }
+}
