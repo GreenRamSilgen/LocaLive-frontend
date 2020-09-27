@@ -3,7 +3,9 @@ import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Slider from "@material-ui/core/Slider";
 
+//CUSTOM COMPONENTS
 import ProductCard from "./ProductCard";
+import LandingSearchBar from "./LandingSearchBar";
 
 import "../../css/LandingPage/LandingPage.css";
 
@@ -142,7 +144,9 @@ export default class LandingPage extends React.Component {
 
 
         <div className="landingPageRight">
-          <div className="landingPageRight__searchBar">Search Bar HERE</div>
+          <div className="landingPageRight__searchBar">
+            <LandingSearchBar/>
+          </div>
           <div className="landingPageRight__products">
             <ProductCard />
             <ProductCard />
