@@ -156,7 +156,9 @@ export default class LandingPage extends React.Component {
             <ProductCard />
             <ProductCard />
           </div>
-          <div className="landingPageRight__loadmore">LOAD MORE</div>
+          <div className="landingPageRight__loadmore">
+            <button type="button" className="btn btn-primary">LOAD MORE</button>
+            </div>
         </div>
       </div>
     );
